@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        .carousel-item img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Off-canvas sidebar -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar">
+        <div class="offcanvas-header">
+            <img src="qiblaquestlogo.png" alt="QiblaQuestLogo" width="250">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-unstyled">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Page content -->
+    <div class="container mt-5">
+        <h1>About Us</h1>
+        <hr>
+        <p>Learn more about our team and our commitment to providing valuable services to the Muslim community in Singapore.</p>
+
+        <!-- Bootstrap 5 Carousel -->
+        <div id="food-slide" class="carousel slide mt-5" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#food-slide" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#food-slide" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#food-slide" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="text-box">
+                        <h2>Masjid Locator</h2>
+                        <p>Find the local masjid near you.</p>
+                    </div>
+                    <img src="mosque.jpg" alt="Mosque in Singapore">
+                </div>
+                <div class="carousel-item">
+                    <div class="text-box">
+                        <h2>Musolla</h2>
+                        <p>Find the Musolla near you.</p>
+                    </div>
+                    <img src="musollah.jpg" alt="Musollah in Singapore">
+                </div>
+                <div class="carousel-item">
+                    <div class="text-box">
+                        <h2>Map</h2>
+                        <p>Navigate hassle-free, wherever you are.</p>
+                    </div>
+                    <img src="prayerplace.jpg" alt="Prayer Place">
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#food-slide" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#food-slide" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+        <button class="btn btn-primary mt-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+            Click Me!
+        </button>
+    </div>
+
+    <!-- Bootstrap JS bundle -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
