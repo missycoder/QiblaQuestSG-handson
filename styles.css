@@ -1,219 +1,188 @@
-@font-face {
-    font-family: 'Open Sans Condensed Light';
-    src: url('../fonts/open-sans-condensed-v15-latin-300.woff2');
-  }
-  
-  .container-fluid {
-      margin: 0;
-      padding: 0;
-      outline: 0
-  }
-  
-  html, body {
-      font-family: 'montserrat', sans-serif;
-      background: #000;
-      height: 100%;
-      /* overflow: hidden; */
-  }
-  
-  .btn {
-      padding: .375rem !important;
-      color: #ad9551;
-      font-size: 20px;
-      background-color: transparent;
-      text-transform: lowercase;
-  }
-  
-  .btn:hover, .btn:focus {
-      color: #008000;
-      text-decoration: none;
-      box-shadow: none;
-  }
-  
-  .stronger {
-      color: #8bc34a !important;
-      font-weight: 700
-  }
-  
-  .sidebar {
+/* Set the body background color to black and text color to white */
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Change the off-canvas background to gold and text color to black */
+.offcanvas-body {
+    background-color: #ad9551;
+    color: #000;
+}
+
+/* Change the form input background to black and set the text color to gold */
+input[type="text"], input[type="email"], textarea {
+    background-color: #000;
+    color: #ad9551;
+}
+
+/* Change the submit button background to gold and set text color to black */
+.btn-submit {
+    background-color: #ad9551;
+    color: #000;
+}
+
+/* Set the active sidebar link color to gold */
+.offcanvas-body ul li a:active {
+    color: #ad9551;
+}
+
+/* Set the hover effect of the sidebar links to gold */
+.offcanvas-body ul li a:hover {
+    color: #ad9551;
+}
+
+/* Update the page content background to gold */
+.container {
+    background-color: #ad9551;
+}
+
+/* Change the primary button background to gold and text color to black */
+.btn-primary {
+    background-color: #ad9551;
+    color: #000;
+}
+
+/* Remove the default blue outline when hovering over buttons */
+.btn:hover, .btn:focus {
+    outline: none;
+}
+
+/* Change hyperlink color to bronze and remove underline */
+a {
+    color: #ad9551;
+    text-decoration: none;
+}
+
+/* Change hyperlink color to black on hover */
+a:hover {
+    color: #000;
+}
+
+/* Set the sidebar link color to black */
+.offcanvas-body ul li a {
+    color: white;
+}
+
+/* Change the sidebar link color to gold on hover */
+.offcanvas-body ul li a:hover {
+    color: black;
+}
+
+/* Sidebar */
+.sidebar {
     height: 100%;
     width: 0;
     position: fixed;
     white-space: nowrap;
-    z-index: 999999;
+    z-index: 1;
     top: 0;
     left: 0;
-    /* background-color: rgba(27,80,119,0.3); */
-    background-color: #ad9551; /* Updated background color */
-    border-right: 1px solid #000;
+    background-color: #ad9551; /* Sidebar background color */
     overflow-x: hidden;
-    overflow-y: auto;
     transition: 0.5s;
     padding-top: 30px;
     font-size: 18px;
+    color: white; /* Sidebar text color */
 }
 
-    
-    /* width */
-    ::-webkit-scrollbar {
-        width: 7px;
-      }
-      
-      /* Track */
-      ::-webkit-scrollbar-track {
-        background: rgba(0, 0, 0, 0);
-        opacity: 0; 
-      }
-       
-      /* Handle */
-      ::-webkit-scrollbar-thumb {
-        background: rgba(136, 136, 136, 0.20);
-        opacity: 0.20; 
-      }
-      
-      /* Handle on hover */
-      ::-webkit-scrollbar-thumb:hover {
-        background:rgba(241, 241, 241, 0.20);
-        opacity: 0.20; 
-      }
-    
-    .sidebar a {
-        padding: 10px 15px;
-        text-decoration: none;
-        font-size: 25px;
-        color: rgba(255, 255, 255, 1);
-        display: block;
-        opacity: 0;
-        /* transition: 0.5s; */
-    }
-    
-    .sidebar a:hover {
-      color: rgba(255,255,255, 1);
-    }
-    
-    .sidebar .closebtn {
-      position: absolute;
-      top: 0;
-      right: 0;
-      font-size: 20px;
-      margin-left: 50px;
-      cursor: pointer;
-      user-select: none;
-    }
-    
-    .openbtn {
-      font-size: 20px;
-      cursor: pointer;
-      background-color: transparent;
-      color: white;
-      padding: 10px 15px;
-      outline: none;
-      box-shadow: none;
-      border: none;
-      position: fixed;
-      z-index: 999999;
-      opacity: 1;
-      user-select: none;
-    }
-    
-   .openbtn:hover {
-      background-color: transparent;
-   }
-    
-   button:focus {
-        outline: none;
-   }
-    
-    #main {
-      transition: margin-left .5s;
-      height: 100%;
-      width: 100%;
-      /* padding: 16px; */
-      position: fixed;
-      /* background-color: #fff; */
-      z-index: 1;
-   }
-  
-   .bg {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 100vh;
-      background: url(../images/bg.jpg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      overflow: hidden;
-      z-index: 9999
-  }
-    
-    
-   @media only screen and (max-width:1536px) {
-        .sidebar {
-            font-size: .85rem;
-      }
-   }
-    
-   @media only screen and (max-width: 1366px) {
-        .sidebar {
-            font-size: .85rem;
-      }
-   }
-  
-   /* Accordion */
-  
-   .accordion-body {
-      color: #fff;
-      padding-left: 15px;
-      white-space: normal !important;
-  }
-  
-   .accordion-item, .accordion-button {
-      background-color: transparent !important;
-      text-decoration: none !important;
-  }
-  
-  .accordion-button::before{
-      flex-shrink:0;
-      width:1.25rem;
-      height:1.25rem;
-      margin-left: 10px;    
-      margin-right: 10px;    
-      content:"";
-      background-image: url(../images/arrow-verde.png);
-      background-repeat:no-repeat;
-      background-size:1.25rem;
-      transition:transform .2s ease-in-out;
-      /* background-color:lightblue; */
-  }
-  
-  .accordion-button:not(.collapsed)::before {
-      background-image: url(../images/arrow-verde.png);
-      transform: rotate(-180deg);
-  }
-  
-  .accordion-button:not(.collapsed) {
-      color: #fff;    
-  }
-  
-  .accordion-button {
-      transition: ease .6s;
-  }
-  
-  button > span {
-      padding: 0 6px 0 0px;
-  }
-   
-  .accordion {
-      padding-top: 15px;
-  }
-  
-  /* Contact Us Form */
-  .contact-link {
-      color: #ffffff; /* White link color */
-      transition: color 0.3s ease; /* Smooth transition effect */
-  }
-  
-  .contact-link:hover {
-      color: #ad9551; /* Gold link color on hover */
-  }
+
+/* Link color */
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white; /* Sidebar link text color */
+    display: block;
+    opacity: 0;
+}
+
+/* Link color on hover */
+.sidebar a:hover {
+    color: black;
+}
+
+/* Close button */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    margin-left: 50px;
+    cursor: pointer;
+    user-select: none;
+    color: white; /* Close button color */
+}
+
+/* Set the background image to cover the entire screen */
+.bg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+/* Set the text color to white in the Accordion */
+.accordion-body {
+    color: #fff;
+    padding-left: 15px;
+    white-space: normal !important;
+}
+
+/* Set the background color of the accordion item and button */
+.accordion-item, .accordion-button {
+    background-color: transparent !important;
+    text-decoration: none !important;
+}
+
+/* Set the background image of the accordion button */
+.accordion-button::before {
+    flex-shrink:0;
+    width:1.25rem;
+    height:1.25rem;
+    margin-left: 10px;    
+    margin-right: 10px;    
+    content:"";
+    background-image: url(../images/arrow-verde.png);
+    background-repeat:no-repeat;
+    background-size:1.25rem;
+    transition:transform .2s ease-in-out;
+}
+
+/* Rotate the accordion button when it is not collapsed */
+.accordion-button:not(.collapsed)::before {
+    background-image: url(../images/arrow-verde.png);
+    transform: rotate(-180deg);
+}
+
+/* Set the color of the accordion button when it is not collapsed */
+.accordion-button:not(.collapsed) {
+    color: #fff;    
+}
+
+/* Set the transition effect of the accordion button */
+.accordion-button {
+    transition: ease .6s;
+}
+
+/* Padding for the accordion */
+.accordion {
+    padding-top: 15px;
+}
+
+/* Contact Us Form */
+.contact-link {
+    color: #ffffff; /* White link color */
+    transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+/* Change the color of the contact link on hover */
+.contact-link:hover {
+    color: #ad9551; /* Gold link color on hover */
+}
