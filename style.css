@@ -18,7 +18,7 @@
   
   .btn {
       padding: .375rem !important;
-      color: gold;
+      color: #ad9551;
       font-size: 20px;
       background-color: transparent;
       text-transform: lowercase;
@@ -214,5 +214,5 @@
   }
   
   .contact-link:hover {
-      color: #ffd700; /* Gold link color on hover */
+      color: #ad9551; /* Gold link color on hover */
   }
