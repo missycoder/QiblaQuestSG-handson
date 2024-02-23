@@ -13,7 +13,7 @@
       font-family: 'montserrat', sans-serif;
       background: #000;
       height: 100%;
-      overflow: hidden;
+      /* overflow: hidden; */
   }
   
   .btn {
@@ -25,7 +25,7 @@
   }
   
   .btn:hover, .btn:focus {
-      color: green;
+      color: #008000;
       text-decoration: none;
       box-shadow: none;
   }
@@ -36,22 +36,23 @@
   }
   
   .sidebar {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      white-space: nowrap;
-      z-index: 999999;
-      top: 0;
-      left: 0;
-      /* background-color: rgba(27,80,119,0.3); */
-      background-color: rgba(0,0,0,0.6);
-      border-right: 1px solid #000;
-      overflow-x: hidden;
-      overflow-y: auto;
-      transition: 0.5s;
-      padding-top: 30px;
-      font-size: 18px;
-    }
+    height: 100%;
+    width: 0;
+    position: fixed;
+    white-space: nowrap;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+    /* background-color: rgba(27,80,119,0.3); */
+    background-color: #ad9551; /* Updated background color */
+    border-right: 1px solid #000;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: 0.5s;
+    padding-top: 30px;
+    font-size: 18px;
+}
+
     
     /* width */
     ::-webkit-scrollbar {
